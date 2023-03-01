@@ -10,7 +10,9 @@ from torch_geometric.utils import (
     to_undirected,
 )
 
-from utils import softmax
+def softmax(a, tau=1):
+    exp_a = np.exp(a * tau)
+    return exp_a / exp_a.sum()
 
 
 @cuda.jit(
