@@ -10,7 +10,7 @@ from torch_geometric.utils import (
     to_undirected,
 )
 
-from gdl.curvature.utils import softmax
+from utils import softmax
 
 
 @cuda.jit(
